@@ -77,14 +77,14 @@ interface ItemProps {
 
 function Item({index}: ItemProps) {
   return (
-    <View style={styles.itemWrapper} key={index}>
+    <View style={styles.itemWrapper}>
       <Text>Item: {index}</Text>
     </View>
   );
 }
 
 function renderItem({index}: ItemProps) {
-  return <Item index={index} />;
+  return <Item index={index} key={index} />;
 }
 
 export default function App() {
